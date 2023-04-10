@@ -7,15 +7,17 @@ The controls system consists of several ROS2 nodes that communicate with each ot
 
     b5_driver: This node interfaces with the hardware of the rover (such as motors, sensors, etc.) and provides a ROS2 interface for controlling them.
     b5_navigation: This node implements the navigation system for the rover, allowing it to move to specified locations and avoid obstacles.
-    b5_manipulation: This node controls the manipulator arm of the rover, allowing it to perform tasks such as picking up objects.
+    b5_manipulation: This node controls the manipulator arm of the rover, allowing it to move the camera.
     b5_gui: This node provides a graphical user interface (GUI) for controlling the rover.
 
 Hardware
 
 The B5 Rover is equipped with the following hardware components:
 
-    Drive Motors: The B5 Rover uses two 228:1 Pololu Plastic Offset motors for propulsion.
-    Motor Driver: The motor driver for the B5 Rover is an OSEPP TB6112 Motor Driver, controlled by an Arduino UNO R3.
+    Drive Motors: The B5 Rover uses four 228:1 Pololu Plastic Offset motors for propulsion. 
+        https://www.pololu.com/product/1118
+    Motor Driver: The motor driver for the B5 Rover is an OSEPP TB6112 Motor Driver, controlled by an Arduino UNO R3. 
+        https://www.osepp.com/electronic-modules/shields/120-motor-shield-6612
     ROS2 Controller: The main ROS2 controller on board the B5 Rover is a Raspberry Pi 4 B+.
 
 Installation
