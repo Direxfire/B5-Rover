@@ -1,4 +1,4 @@
-B5 Rover Controls System
+<h1>B5 Rover Controls System</h1>
 
 This repository contains the code for the controls system of the B5 Rover, developed by EGEN 310 Team B5. The controls system is built using ROS2.
 Overview
@@ -10,7 +10,7 @@ The controls system consists of several ROS2 nodes that communicate with each ot
     b5_manipulation: This node controls the manipulator arm of the rover, allowing it to move the camera.
     b5_gui: This node provides a graphical user interface (GUI) for controlling the rover.
 
-Hardware
+**Hardware**
 
 The B5 Rover is equipped with the following hardware components:
 
@@ -20,7 +20,7 @@ The B5 Rover is equipped with the following hardware components:
         https://www.osepp.com/electronic-modules/shields/120-motor-shield-6612
     ROS2 Controller: The main ROS2 controller on board the B5 Rover is a Raspberry Pi 4 B+.
 
-Installation
+**Installation**
 
 To install the B5 Rover controls system, follow these steps:
 
@@ -37,7 +37,7 @@ Source the setup file by running the following command:
     
 
 
-Usage
+**Usage**
 
 To run the B5 Rover controls system, follow these steps:
 
@@ -60,20 +60,40 @@ ros2 launch b5_manipulation b5_manipulation_launch.py
 ros2 launch b5_gui b5_gui_launch.py
 
 
-RViz
+**RViz**
 
 RViz files are used to render the collision and visual models of the rover in RViz2 this allows for testing of the controls, collision, and sensors without need for testing on the actual robot. This is a useful tool for mocking up the rover to do basic modeling and testing. This has allowed me to continue to work on the controls system without need for a finalized rover design.   
-License
+**To-Do**
+
+- [x] Sync Raspberry Pi and Dev Computer with GitHub
+- [ ] Create a ROS2 arduino Serial Bridge 
+- [x] Create a PWM motor driver signal on Arduino
+- [x] Test battery power management
+- [x] Test motor current draw
+- [x] Design Battery holder
+- [x] Design Electronics mount  
+- [x] Model rover in Rviz
+- [ ] Render model in Gazebo (Gazebo Ignition)
+- [ ] Impliment controls system with keyboard in Gazebo
+- [ ] Impliment X-Box controls system in Gazebo
+- [ ] Finalize ROS2 Arduino Motor Control --See Articulated Robotics
+- [ ] Add delight to the experience when all tasks are complete :tada:
+
+
+**License**
 
 This code is licensed under the MIT License. See the LICENSE file for more details.
-Contributors
+
+**Contributors**
 
     Drew Currie (Electrical Engineer)
     Sam Clyncke (Mechanical Engineer)
     Ryan Dowdy (Chemical Engineer)
     Calvin Servheen (Industrial Engineer)
 
-Acknowledgments
+**Acknowledgments**
 
     ROS2 - Robot Operating System
     OpenCV - Open Source Computer Vision Library
+    Josh Newans - ROS2 community contributor and creator of the template this project was built on 
+        [Josh Newans]([url](https://articulatedrobotics.xyz/))
