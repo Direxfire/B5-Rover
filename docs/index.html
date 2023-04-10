@@ -1,39 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>B5 Rover Controls System</title>
-</head>
-<body>
-	<h1>B5 Rover Controls System</h1>
-	<p>This repository contains the code for the controls system of the B5 Rover, developed by EGEN 310 Team B5. The controls system is built using ROS2.</p>
-	<h2>Overview</h2>
-	<p>The controls system consists of several ROS2 nodes that communicate with each other to control the rover's movement and actions. The main nodes are:</p>
-	<ul>
-		<li>b5_driver: This node interfaces with the hardware of the rover (such as motors, sensors, etc.) and provides a ROS2 interface for controlling them.</li>
-		<li>b5_navigation: This node implements the navigation system for the rover, allowing it to move to specified locations and avoid obstacles.</li>
-		<li>b5_manipulation: This node controls the manipulator arm of the rover, allowing it to move the camera.</li>
-		<li>b5_gui: This node provides a graphical user interface (GUI) for controlling the rover.</li>
-	</ul>
-	<h2>Hardware</h2>
-	<p>The B5 Rover is equipped with the following hardware components:</p>
-	<ul>
-		<li>Drive Motors: The B5 Rover uses four 228:1 Pololu Plastic Offset motors for propulsion. 
-			<a href="https://www.pololu.com/product/1118">https://www.pololu.com/product/1118</a></li>
-		<li>Motor Driver: The motor driver for the B5 Rover is an OSEPP TB6112 Motor Driver, controlled by an Arduino UNO R3. 
-			<a href="https://www.osepp.com/electronic-modules/shields/120-motor-shield-6612">https://www.osepp.com/electronic-modules/shields/120-motor-shield-6612</a></li>
-		<li>ROS2 Controller: The main ROS2 controller on board the B5 Rover is a Raspberry Pi 4 B+.</li>
-	</ul>
-	<h2>Installation</h2>
-	<p>To install the B5 Rover controls system, follow these steps:</p>
-	<ol>
-		<li>Clone this repository to your local machine.</li>
-		<li>Install ROS2 (if you haven't already) by following the instructions on the ROS2 installation page.</li>
-		<li>Build the code using the colcon build system by running the following command in the root of the repository:</li>
-		<pre><code>colcon build</code></pre>
-		<li>Source the setup file by running the following command:</li>
-		<pre><code>source install/setup.bash</code></pre>
-	</ol>
-	<h2>Usage</h2>
-	<p>To run the B5 Rover controls system, follow these steps:</p>
-	<ol>
-		<li>Connect
+---
+title: Home
+layout: base
+---
+
+<h1>My Latest Blogs</h1>
+
+<div class="blog-post">
+    {% for post in site.posts limit:5 %}
+    <h2><a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a><h2>
+    <h3><i class="fas fa-calendar-alt"></i> {{ post.date | date_to_long_string }}</h3>
+    <p>{{ post.excerpt }} <a href="{{ post.url | absolute_url }}">[...]</a></p>
+    {% endfor -%}
+</div>
