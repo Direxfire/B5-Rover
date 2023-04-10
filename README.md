@@ -26,13 +26,13 @@ Clone this repository to your local machine.
     Install ROS2 (if you haven't already) by following the instructions on the ROS2 installation page.
 Build the code using the colcon build system by running the following command in the root of the repository:
 
-colcon build
+    colcon build
 
-    Source the setup file by running the following command:
+Source the setup file by running the following command:
 
-bash
+    bash
 
-source install/setup.bash
+    source install/setup.bash
 
 Usage
 
