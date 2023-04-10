@@ -22,9 +22,9 @@ Installation
 
 To install the B5 Rover controls system, follow these steps:
 
-    Clone this repository to your local machine.
+Clone this repository to your local machine.
     Install ROS2 (if you haven't already) by following the instructions on the ROS2 installation page.
-    Build the code using the colcon build system by running the following command in the root of the repository:
+Build the code using the colcon build system by running the following command in the root of the repository:
 
 colcon build
 
@@ -38,7 +38,8 @@ Usage
 
 To run the B5 Rover controls system, follow these steps:
 
-    Connect the hardware of the rover to your machine.
+Connect the hardware of the rover to your machine.
+
     Launch the b5_driver node by running the following command:
 
 ros2 launch b5_driver b5_driver_launch.py
