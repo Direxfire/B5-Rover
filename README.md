@@ -30,7 +30,6 @@ Build the code using the colcon build system by running the following command in
 
 Source the setup file by running the following command:
 
-    bash
 
     source install/setup.bash
 
