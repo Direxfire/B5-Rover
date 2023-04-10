@@ -34,8 +34,8 @@ Source the setup file by running the following command:
 
 
     source install/setup.bash
-RViz
-    RViz files are used to render the collision and visual models of the rover in RViz2 this allows for testing of the controls, collision, and sensors without need for testing on the actual robot. This is a useful tool for mocking up the rover to do basic modeling and testing. This has allowed me to continue to work on the controls system without need for a finalized rover design.   
+    
+
 
 Usage
 
@@ -59,6 +59,10 @@ ros2 launch b5_manipulation b5_manipulation_launch.py
 
 ros2 launch b5_gui b5_gui_launch.py
 
+
+RViz
+
+RViz files are used to render the collision and visual models of the rover in RViz2 this allows for testing of the controls, collision, and sensors without need for testing on the actual robot. This is a useful tool for mocking up the rover to do basic modeling and testing. This has allowed me to continue to work on the controls system without need for a finalized rover design.   
 License
 
 This code is licensed under the MIT License. See the LICENSE file for more details.
