@@ -11,16 +11,108 @@
   </head>
   <body>
     
-   <h1>B5 Rover Controls</h1>
-    <p>This repository contains the code for the controls system of the B5 Rover, developed by EGEN 310 Team B5. The controls system is built using ROS2.</p>
-    <h2>Overview</h2>
-    <p>The controls system consists of several ROS2 nodes that communicate with each other to control the rover's movement and actions. The main nodes are:</p>
-    <ul>
-      <li><strong>b5_driver:</strong> This node interfaces with the hardware of the rover (such as motors, sensors, etc.) and provides a ROS2 interface for controlling them.</li>
-      <li><strong>b5_navigation:</strong> This node implements the navigation system for the rover, allowing it to move to specified locations and avoid obstacles.</li>
-      <li><strong>b5_manipulation:</strong> This node controls the manipulator arm of the rover, allowing it to move the camera.</li>
-      <li><strong>b5_gui:</strong> This node provides a graphical user interface (GUI) for controlling the rover.</li>
-    </ul>
+    <div class="container">
+        <h2>Overview</h2>
+        <p>The controls system consists of several ROS2 nodes that communicate with each other to control the rover's movement and actions. The main nodes are:</p>
+        <ul class="list-group">
+          <li class="list-group-item"><strong>b5_driver:</strong> This node interfaces with the hardware of the rover (such as motors, sensors, etc.) and provides a ROS2 interface for controlling them.</li>
+          <li class="list-group-item"><strong>b5_navigation:</strong> This node implements the navigation system for the rover, allowing it to move to specified locations and avoid obstacles.</li>
+          <li class="list-group-item"><strong>b5_manipulation:</strong> This node controls the manipulator arm of the rover, allowing it to move the camera.</li>
+          <li class="list-group-item"><strong>b5_gui:</strong> This node provides a graphical user interface (GUI) for controlling the rover.</li>
+        </ul>
+      </div>
+
+
+      <div class="container">
+        <div class="card border-secondary mb-3">
+          <div class="card-header"><h3>Hardware</h3></div>
+          <div class="card-body">
+            <h4 class="card-title">The B5 Rover is equipped with the following hardware components:</h4>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><strong>Drive Motors:</strong> The B5 Rover uses four 228:1 Pololu Plastic Offset motors for propulsion. <a href="https://www.pololu.com/product/1118" target="_blank">https://www.pololu.com/product/1118</a></li>
+              <li class="list-group-item"><strong>Motor Driver:</strong> The motor driver for the B5 Rover is an OSEPP TB6112 Motor Driver, controlled by an Arduino UNO R3. <a href="https://www.osepp.com/electronic-modules/shields/120-motor-shield-6612" target="_blank">https://www.osepp.com/electronic-modules/shields/120-motor-shield-6612</a></li>
+              <li class="list-group-item"><strong>ROS2 Controller:</strong> The main ROS2 controller on board the B5 Rover is a Raspberry Pi 4 B+.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <h2>Installation</h2>
+        <p>To install the B5 Rover controls system, follow these steps:</p>
+        <ol>
+          <li>Clone this repository to your local machine.</li>
+          <li>Install ROS2 (if you haven't already) by following the instructions on the ROS2 installation page.</li>
+          <li>Build the code using the colcon build system by running the following command in the root of the repository:</li>
+          <code>colcon build</code>
+          <li>Source the setup file by running the following command:</li>
+          <code>source install/setup.bash</code>
+        </ol>
+      </div>
+
+      <div class="container">
+        <h2>Usage</h2>
+        <p>To run the B5 Rover controls system, follow these steps:</p>            
+        <ol>
+          <li>Connect the hardware of the rover to your machine.</li>
+          <li>Launch the b5_driver node by running the following command:</li>
+        </ol>
+        <code>ros2 launch b5_driver b5_driver_launch.py</code>
+        <ol start="2">
+          <li>Launch the b5_navigation node by running the following command:</li>
+        </ol>
+        <code>ros2 launch b5_navigation b5_navigation_launch.py</code>
+        <ol start="3">
+          <li>Launch the b5_manipulation node by running the following command:</li>
+        </ol>
+        <code>ros2 launch b5_manipulation b5_manipulation_launch.py</code>
+        <ol start="4">
+          <li>Launch the b5_gui node by running the following command:</li>
+        </ol>
+        <code>ros2 launch b5_gui b5_gui_launch.py</code>
+      </div>
+
+      <div class="container">
+        <h3>RViz</h3>
+        <p>RViz files are used to render the collision and visual models of the rover in RViz2. This allows for testing of the controls, collision, and sensors without the need for testing on the actual robot. This is a useful tool for mocking up the rover to do basic modeling and testing. This has allowed me to continue to work on the controls system without the need for a finalized rover design.</p>
+     </div>
+
+     <div class="container">
+        <h2> To-Do List </h2>
+        <ul class="list-group">
+          <li class="list-group-item list-group-item-success">Sync Raspberry Pi and Dev Computer with GitHub</li>
+          <li class="list-group-item list-group-item-danger">Create a ROS2 arduino Serial Bridge</li>
+          <li class="list-group-item list-group-item-success">Create a PWM motor driver signal on Arduino</li>
+          <li class="list-group-item list-group-item-success">Test battery power management</li>
+          <li class="list-group-item list-group-item-success">Test motor current draw</li>
+          <li class="list-group-item list-group-item-success">Design Battery holder</li>
+          <li class="list-group-item list-group-item-success">Design Electronics mount</li>
+          <li class="list-group-item list-group-item-success">Model rover in Rviz</li>
+          <li class="list-group-item list-group-item-info">Render model in Gazebo (Gazebo Ignition)</li>
+          <li class="list-group-item list-group-item-info">Impliment controls system with keyboard in Gazebo</li>
+          <li class="list-group-item list-group-item-info">Impliment X-Box controls system in Gazebo</li>
+          <li class="list-group-item list-group-item-info">Finalize ROS2 Arduino Motor Control --See Articulated Robotics</li>
+          <li class="list-group-item list-group-item-info">Add delight to the experience when all tasks are complete :tada:</li>
+        </ul>
+      </div>
+      
+      <div class="container">
+        <h3>License</h3>
+        <p>This code is licensed under the MIT License. See the LICENSE file for more details.</p>
+        <h3>Contributors</h3>
+        <ul class="list-group">
+          <li class="list-group-item">Drew Currie (Electrical Engineer)</li>
+          <li class="list-group-item">Sam Clyncke (Mechanical Engineer)</li>
+          <li class="list-group-item">Ryan Dowdy (Chemical Engineer)</li>
+          <li class="list-group-item">Calvin Servheen (Industrial Engineer)</li>
+        </ul>
+        <h3>Acknowledgments</h3>
+        <ul class="list-group">
+          <li class="list-group-item">ROS2 - Robot Operating System</li>
+          <li class="list-group-item">OpenCV - Open Source Computer Vision Library</li>
+          <li class="list-group-item">Josh Newans - ROS2 community contributor and creator of the template this project was built on</li>
+        </ul>
+      </div>
+
     <!-- Add Bootstrap JavaScript and jQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-L/ESovwwlIXjK/g0GGlCfF1iXO7ZNj3eGMKnRs1d0zWwu84Bx5u5JKjgV7AmsiW/" crossorigin="anonymous"></script>
