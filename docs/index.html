@@ -10,8 +10,17 @@
     </style>
   </head>
   <body>
-    <!-- Add your content here -->
     
+   <h1>B5 Rover Controls</h1>
+    <p>This repository contains the code for the controls system of the B5 Rover, developed by EGEN 310 Team B5. The controls system is built using ROS2.</p>
+    <h2>Overview</h2>
+    <p>The controls system consists of several ROS2 nodes that communicate with each other to control the rover's movement and actions. The main nodes are:</p>
+    <ul>
+      <li><strong>b5_driver:</strong> This node interfaces with the hardware of the rover (such as motors, sensors, etc.) and provides a ROS2 interface for controlling them.</li>
+      <li><strong>b5_navigation:</strong> This node implements the navigation system for the rover, allowing it to move to specified locations and avoid obstacles.</li>
+      <li><strong>b5_manipulation:</strong> This node controls the manipulator arm of the rover, allowing it to move the camera.</li>
+      <li><strong>b5_gui:</strong> This node provides a graphical user interface (GUI) for controlling the rover.</li>
+    </ul>
     <!-- Add Bootstrap JavaScript and jQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-L/ESovwwlIXjK/g0GGlCfF1iXO7ZNj3eGMKnRs1d0zWwu84Bx5u5JKjgV7AmsiW/" crossorigin="anonymous"></script>
