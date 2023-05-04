@@ -66,16 +66,16 @@ RViz files are used to render the collision and visual models of the rover in RV
 **To-Do**
 
 - [x] Sync Raspberry Pi and Dev Computer with GitHub
-- [ ] Create a ROS2 arduino Serial Bridge 
+- [x] Create a ROS2 arduino Serial Bridge 
 - [x] Create a PWM motor driver signal on Arduino
 - [x] Test battery power management
 - [x] Test motor current draw
 - [x] Design Battery holder
 - [x] Design Electronics mount  
 - [x] Model rover in Rviz
-- [ ] Render model in Gazebo (Gazebo Ignition)
-- [ ] Impliment controls system with keyboard in Gazebo
-- [ ] Impliment X-Box controls system in Gazebo
+- [x] Render model in Gazebo (Gazebo Ignition)
+- [x] Impliment controls system with keyboard in Gazebo
+- [x] Impliment X-Box controls system in Gazebo
 - [ ] Finalize ROS2 Arduino Motor Control --See Articulated Robotics
 - [ ] Add delight to the experience when all tasks are complete :tada:
 
